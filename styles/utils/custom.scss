@@ -1,0 +1,41 @@
+.portfolio {
+  .portfolio-image {
+    transition: all 0.4s ease;
+    right: -150px !important;
+    @media (min-width: 1500px) {
+      right: 0 !important;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      z-index: 1;
+      clip-path: polygon(100% 0, 0 0, 0 100%);
+      background-color: #fff;
+      width: 275px;
+      transition: all 0.4s ease;
+    }
+  }
+  .portfolio-link {
+    min-height: 64px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    @media (min-width: 576px) {
+      min-width: 155px;
+      width: unset;
+      &:nth-child(n + 4) {
+        min-width: 242px;
+      }
+    }
+    @media (min-width: 1200px) {
+      min-width: 180px;
+      width: unset;
+      &:nth-child(n + 4) {
+        min-width: 294px;
+      }
+    }
+  }
+}

@@ -1,0 +1,40 @@
+/*
+ * @copyright   Copyright (C) 2022 AesirX. All rights reserved.
+ * @license     GNU General Public License version 3, see LICENSE.
+ */
+@import "~bootstrap/scss/utilities";
+$utilities: map-merge(
+  $utilities,
+  (
+    "z-index": (
+      property: z-index,
+      class: z,
+      values: (
+        0: 0,
+        1: 1,
+        2: 2,
+        4: 99,
+        3: 999,
+        5: 9999,
+      ),
+    ),
+    "line-height": (
+      property: line-height,
+      class: lh,
+      values: (
+        1: 1,
+        sm: $line-height-sm,
+        base: $line-height-base,
+        md: 1.8,
+        lg: $line-height-lg,
+      ),
+    ),
+    "position": (
+      property: position,
+      responsive: true,
+      values: static relative absolute fixed sticky,
+    ),
+  )
+);
+
+@import "bootstrap/scss/utilities/api";
